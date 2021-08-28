@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            /* color: white; */
+        }
+
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        @media (max-width:350px) {
+            body {
+                /* background-color: aqua; */
+            }
+        }
+
+        @media (min-width:350px) and (max-width:400px) {
+            body {
+                /* background-color: blueviolet; */
+            }
+        }
+
+        @media (min-width:400px) and (max-width:800px) {
+            body {
+                /* background-color: coral; */
+            }
+        }
+
+        @media (min-width:800px) {
+            body {
+                /* background-color: black; */
+            }
+        }
+
+
+
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                "head head head"
+                "navbar navbar sign"
+                "search search search"
+                "mid mid mid"
+                "delivery delivery delivery "
+                "footer footer footer"
+                "copyright copyright copyright";
+        }
+
+        .item {
+            /* background-color: lightgreen; */
+            /* border: 2px solid white; */
+            padding: 20px;
+        }
+
+        #head {
+            font-family: 'Frijole', cursive;
+            font-size: 38px;
+            grid-area: head;
+            text-align: center;
+            border-radius: 10px;
+            background-color: crimson;
+            border: 2px solid coral;
+            box-shadow: inset 94px 77px 46px -30px red;
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin: 8px 5px;
+            color: black;
+
+        }
+
+        #navbar {
+            grid-area: navbar;
+            font-family: 'Grandstander', cursive;
+            font-size: 30px;
+            background-color: black;
+            border: none;
+
+
+        }
+
+        #navbar ul {
+            display: flex;
+        }
+
+        #navbar ul li {
+            padding: 20px;
+            margin: 0px 24px;
+            list-style: none;
+
+        }
+
+        #navbar ul li a {
+
+            color: white;
+            text-decoration: none;
+        }
+
+        #sign {
+            grid-area: sign;
+            display: flex;
+            flex-direction: row-reverse;
+            /* float: right; */
+            /* justify-content: center; */
+            align-items: center;
+            background-color: black;
+            border: none;
+
+
+        }
+
+        #sign a {
+
+            text-decoration: none;
+            border: 2px solid coral;
+            color: white;
+            font-size: 20px;
+            /* height: 12px;
+            width: 60px; */
+
+            padding: 15px;
+            margin: 0px;
+            background-color: crimson;
+            border-radius: 12px;
+        }
+
+        #search {
+            grid-area: search;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #search input {
+
+            width: 45%;
+            height: 50px;
+            border-radius: 10px;
+            border: 2px solid coral;
+            font-size: 20px;
+            padding: 6px 10px;
+            color: black;
+            font-weight: bold;
+        }
+
+
+
+        #mid {
+            grid-area: mid;
+            /* height: 100%; */
+            /* width: 100%; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .block {
+            border-radius: 23px;
+            background-color: crimson;
+            border: 2px solid coral;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            height: 400px;
+            width: 300px;
+        }
+
+        .block h1 {
+            font-family: 'Bangers', cursive;
+
+        }
+
+        .block img {
+            height: 120px;
+            width: 120px;
+            margin: 20px;
+            margin-bottom: 0px;
+            border-radius: 25px;
+        }
+
+        .block p {
+
+            font-family: 'Epilogue', sans-serif;
+            margin: 30px;
+
+        }
+
+        .apply {
+
+            text-decoration: none;
+            font-size: 20px;
+            border: 2px solid coral;
+            background-color: black;
+
+            color: white;
+
+
+            padding: 12px;
+
+            border-radius: 10px;
+        }
+
+        .apply:hover {
+            background-color: coral;
+            border: 2px solid white;
+        }
+
+        #delivery {
+            grid-area: delivery;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #contact {
+            font-size: 20px;
+        }
+
+        .cont {
+            margin: 15px;
+            border-radius: 5px;
+        }
+
+        #footer {
+            grid-area: footer;
+            color: white;
+        }
+
+
+        #int {
+
+            height: 250px;
+            /* border: 2px solid coral; */
+            padding: 20px;
+        }
+
+        #end {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #end div {
+            /* border: 2px solid red; */
+            margin: 10px;
+            padding: 10px;
+
+        }
+
+
+        #end div section {
+
+            /* border: 2px solid red; */
+            padding: 10px;
+        }
+
+        #int h1 {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #int h3 {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #end section {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        #end img {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+        }
+
+        #copyright {
+            grid-area: copyright;
+            text-align: center;
+            font-size: 23px;
+            font: bold;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="item" id="head">
+            GoGoFoody!
+        </div>
+
+
+        <div class="item" id="navbar">
+
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="item" id="sign">
+            <a href="">
+                Sign up
+            </a>
+        </div>
+
+        <div class="item" id="search">
+            <input type="text " placeholder="Search">
+        </div>
+
+        <div class="item" id="mid">
+
+            <div class="block">
+                <h1 class="heafing">NUTRICIOUS FOOD</h1>
+                <img src="img6.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur alias fugit in non, cum
+                    soluta, doloribus ex officiis fuga quo obcaecati dolor consequuntur facilis iusto nemo! Iusto, ipsam
+                    rem?</p>
+                <a href="" class="apply">Select</a>
+            </div>
+
+
+            <div class="block">
+                <h1 class="heafing">SPICY FOOD</h1>
+                <img src="pexels-artem-beliaikin-929192.jpg" alt="">
+                <div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur alias fugit in non, cum
+                        soluta, doloribus ex officiis fuga quo obcaecati dolor consequuntur facilis iusto nemo! Iusto,
+                        ipsam
+                        rem?</p>
+                </div>
+                <a href="" class="apply">Select</a>
+            </div>
+
+
+
+            <div class="block">
+                <h1 class="heafing">VEG FOOD</h1>
+                <img src="pexels-trang-doan-936611.jpg" alt="">
+                <div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur alias fugit in non, cum
+                        soluta, doloribus ex officiis fuga quo obcaecati dolor consequuntur facilis iusto nemo! Iusto,
+                        ipsam
+                        rem?</p>
+                </div>
+                <a href="" class="apply">Select</a>
+            </div>
+
+
+            <div class="block">
+                <h1 class="heafing">NON-VEG FOOD</h1>
+                <img src="food-1631727_1920.jpg" alt="">
+                <div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur alias fugit in non, cum
+                        soluta, doloribus ex officiis fuga quo obcaecati dolor consequuntur facilis iusto nemo! Iusto,
+                        ipsam
+                        rem?</p>
+                </div>
+                <a href="" class="apply">Select</a>
+            </div>
+
+
+            <div class="block">
+                <h1 class="heafing">SEA FOOD</h1>
+                <img src="fish-2366925_1920.jpg" alt="">
+                <div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur alias fugit in non, cum
+                        soluta, doloribus ex officiis fuga quo obcaecati dolor consequuntur facilis iusto nemo! Iusto,
+                        ipsam
+                        rem?</p>
+                </div>
+                <a href="" class="apply">Select</a>
+            </div>
+
+
+            <div class="block">
+                <h1 class="heafing">BRAZILIAN FOOD</h1>
+                <img src="painted-787445_1920.jpg" alt="">
+                <div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur alias fugit in non, cum
+                        soluta, doloribus ex officiis fuga quo obcaecati dolor consequuntur facilis iusto nemo! Iusto,
+                        ipsam
+                        rem?</p>
+                </div>
+                <a href="" class="apply">Select</a>
+            </div>
+
+
+            <div class="block">
+                <h1 class="heafing">CHINESE FOOD</h1>
+                <img src="img4.jpg" alt="">
+                <div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur alias fugit in non, cum
+                        soluta, doloribus ex officiis fuga quo obcaecati dolor consequuntur facilis iusto nemo! Iusto,
+                        ipsam
+                        rem?</p>
+                </div>
+                <a href="" class="apply">Select</a>
+            </div>
+
+            <div class="block">
+                <h1 class="heafing">CUISINE</h1>
+                <img src="meal-918639_1920.jpg" alt="">
+                <div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur alias fugit in non, cum
+                        soluta, doloribus ex officiis fuga quo obcaecati dolor consequuntur facilis iusto nemo! Iusto,
+                        ipsam
+                        rem?</p>
+                </div>
+                <a href="" class="apply">Select</a>
+            </div>
+
+            <div class="block">
+                <h1 class="heafing">PUDDING</h1>
+                <img src="img.jpg" alt="">
+                <div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur alias fugit in non, cum
+                        soluta, doloribus ex officiis fuga quo obcaecati dolor consequuntur facilis iusto nemo! Iusto,
+                        ipsam
+                        rem?</p>
+                </div>
+                <a href="" class="apply">Select</a>
+            </div>
+
+
+        </div>
+
+
+        <div class="item" id="delivery">
+
+            <div class="block">
+                <h1 class="heafing">FOOD DELIVERY</h1>
+                <img src="img5.png" alt="">
+                <div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur alias fugit in non, cum
+                        soluta, doloribus ex officiis fuga quo obcaecati dolor consequuntur facilis iusto nemo! Iusto,
+                        ipsam
+                        rem?</p>
+                </div>
+                <a href="" class="apply">Call now</a>
+            </div>
+
+            <div class="block" id="contact">
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="cont">
+
+                <label for="phone"></label>phone:</label>
+                <input type="text" id="phone" class="cont">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="cont">
+
+                <label for="address">Address:</label>
+                <textarea name="" id="address" cols="30" rows="10" class="cont"></textarea>
+            </div>
+
+        </div>
+        <div class="item" id="footer">
+
+
+
+
+            <section id="int">
+                <hr>
+                <br>
+                <center>
+                    <h1>HOW IT WORKS</h1>
+                </center>
+
+                <br>
+                <center>
+
+                    <section id="end">
+
+                        <div>
+                            <img src="plate.jpg" alt="">
+                            <h3>Sekect your meal</h3>
+                            <section>
+                                <p>Select your food</p>
+                                <p>select dish</p>
+                                <p>order. </p>
+                            </section>
+                        </div>
+
+                        <div>
+                            <img src="delivery.jpg" alt="">
+                            <h3>We will deliver it</h3>
+                            <section>
+                                <p>We prepare and deliver</p>
+                                <p>your meal in</p>
+                                <p>time. </p>
+                            </section>
+                        </div>
+
+                        <div>
+                            <img src="bowl.jpg" alt="">
+                            <h3>Sekect your meal</h3>
+                            <section>
+                                <P>Eat and enjoy</P>
+                                <P>your tasty</P>
+                                <P>food.</P>
+                            </section>
+                        </div>
+
+
+                    </section>
+
+                </center>
+            </section>
+
+
+
+
+
+
+        </div>
+
+        <div class="item" id="copyright">
+        
+            <p>Copyright © www.GoFOODY.com. All rights reserved!</p>
+        </div>
+
+
+
+    </div>
+
+
+    </div>
+
+    </div>
+</body>
+
+</html>
